@@ -3,9 +3,23 @@ import Vue from 'vue';
 
 Vue.use(Vuex);
 
-const state = {};
+const state = {
+  todos: [],
+};
 
-const actions = {};
+const actions = {
+  addTodo({
+    commit
+  }, name) {
+    commit('addTodo', name)
+  },
+
+  deleteTodo({
+    commit
+  }, todo) {
+    commit('deleteTodo', todo)
+  }
+};
 
 const getters = {};
 
