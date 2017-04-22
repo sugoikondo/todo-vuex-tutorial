@@ -23,7 +23,13 @@ const actions = {
 
 const getters = {};
 
-const mutations = {};
+const mutations = {
+  addTodo(state, name) {
+    state.todos.push({
+      name: name
+    })
+  }
+};
 
 export default new Vuex.Store({
   state,

@@ -3,13 +3,11 @@
   <div class="input-field col m12">
     <input type="text" placeholder="Todo name" @submit.prevent="">
   </div>
-
 </div>
 </template>
 
 <script>
-export default {}
-</script>
+export default {
 
-<style lang="css">
-</style>
+}
+</script>

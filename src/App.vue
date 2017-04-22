@@ -1,12 +1,13 @@
 <template>
 <div id="app">
-  <img src="./assets/logo.png">
+  <div class="row">
+    <new-todo-form></new-todo-form>
+    <todo-list></todo-list>
+  </div>
 </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-
 export default {
   name: 'app',
   components: {}
