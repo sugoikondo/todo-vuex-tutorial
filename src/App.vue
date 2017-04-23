@@ -8,9 +8,16 @@
 </template>
 
 <script>
+import TodoList from './components/TodoList'
+import NewTodoForm from './components/NewTodoForm'
+
 export default {
   name: 'app',
-  components: {}
+  el: '#app',
+  components: {
+    TodoList,
+    NewTodoForm
+  }
 }
 </script>
 
