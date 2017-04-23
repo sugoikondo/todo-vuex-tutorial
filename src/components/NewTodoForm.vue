@@ -2,8 +2,8 @@
 <div>
   <form>
     <md-input-container>
-      <label>TOODO name</label>
-      <md-input placeholder="My nice placeholder"></md-input>
+      <label>タスク名</label>
+      <md-input placeholder="Todo名をここに入力するよー"></md-input>
     </md-input-container>
   </form>
 </div>

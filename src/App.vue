@@ -3,8 +3,10 @@
   <md-toolbar>
     <h1 class="md-title">My Title</h1>
   </md-toolbar>
-  <new-todo-form></new-todo-form>
-  <todo-list></todo-list>
+  <div class="main-content">
+    <new-todo-form></new-todo-form>
+    <todo-list></todo-list>
+  </div>
 </div>
 </template>
 
@@ -20,3 +22,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.main-content {
+  margin: 16px;
+}
+</style>
