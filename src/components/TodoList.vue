@@ -1,11 +1,17 @@
 <template>
 <div class="row">
-  <card v-for="todo in todos" :todo="todo" :key="todo.id"></card>
+  <todo-card v-for="todo in todos" :todo="todo" :key="todo.id"></todo-card>
 </div>
 </template>
 
 <script>
-export default {}
+import TodoCard from './TodoCard'
+
+export default {
+  components: {
+    TodoCard
+  }
+}
 </script>
 
 <style>

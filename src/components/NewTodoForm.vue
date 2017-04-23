@@ -1,8 +1,11 @@
 <template>
 <div>
-  <div class="input-field col m12">
-    <input type="text" placeholder="Todo name" @submit.prevent="">
-  </div>
+  <form>
+    <md-input-container>
+      <label>TOODO name</label>
+      <md-input placeholder="My nice placeholder"></md-input>
+    </md-input-container>
+  </form>
 </div>
 </template>
 

@@ -1,9 +1,10 @@
 <template>
-<div class="card">
-  <div class="card-content">
-    <div class="card-title">{{todo.name}}</div>
-  </div>
-</div>
+<md-card>
+  <md-card-header>
+    <div class="md-title">{{todo.name}}</div>
+    <div class="md-subhead">{{todo.deadline}}</div>
+  </md-card-header>
+</md-card>
 </template>
 
 <script>

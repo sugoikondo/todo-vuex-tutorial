@@ -1,9 +1,10 @@
 <template>
 <div id="app">
-  <div class="row">
-    <new-todo-form></new-todo-form>
-    <todo-list></todo-list>
-  </div>
+  <md-toolbar>
+    <h1 class="md-title">My Title</h1>
+  </md-toolbar>
+  <new-todo-form></new-todo-form>
+  <todo-list></todo-list>
 </div>
 </template>
 
@@ -13,14 +14,9 @@ import NewTodoForm from './components/NewTodoForm'
 
 export default {
   name: 'app',
-  el: '#app',
   components: {
     TodoList,
     NewTodoForm
   }
 }
 </script>
-
-<style>
-#app {}
-</style>

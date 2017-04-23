@@ -7,13 +7,17 @@ import TodoList from './components/TodoList'
 import NewTodoForm from './components/NewTodoForm'
 import store from './vuex/store'
 Vue.config.productionTip = false
+
 Vue.use(VueMaterial)
 
 /* eslint-disable no-new */
 new Vue({
+  store,
   el: '#app',
+  template: '<App />',
   components: {
     App,
-    TodoList
-  }
-})
+    NewTodoForm,
+    TodoList,
+  },
+});
