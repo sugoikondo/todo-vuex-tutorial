@@ -1,6 +1,6 @@
 <template>
 <div class="row">
-  <todo-card v-for="todo in todos" :todo="todo" :key="todo.id"></todo-card>
+  <todo-card v-for="todo in $store.state.todos" :todo="todo" :key="todo.id"></todo-card>
 </div>
 </template>
 
@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style>
-
+.md-card {
+  margin: 16px 0;
+}
 </style>

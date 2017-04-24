@@ -1,33 +1,54 @@
 import Vuex from 'vuex';
 import Vue from 'vue';
+import moment from 'moment';
 
 Vue.use(Vuex);
 
 const state = {
-  todos: [],
+  todos: [{
+      id: 0,
+      name: 'テストのTODO',
+      createdAt: moment().format('MMMM Do YYYY, h:mm:ss a'),
+    },
+    {
+      id: 1,
+      name: '宿題終わらせないと',
+      createdAt: moment().format('MMMM Do YYYY, h:mm:ss a'),
+    }
+  ],
+  todoName: '',
 };
 
 const actions = {
   addTodo({
-    commit
+    commit,
   }, name) {
-    commit('addTodo', name)
+    var todo = {
+      name: name,
+      createdAt: moment().format('MMMM Do YYYY, h:mm:ss a')
+    }
+    commit('addTodo', todo)
   },
 
   deleteTodo({
-    commit
+    commit,
   }, todo) {
-    commit('deleteTodo', todo)
-  }
+    commit('deleteTodo', todo);
+  },
 };
 
 const getters = {};
 
 const mutations = {
-  addTodo(state, name) {
+  addTodo(state, todo) {
     state.todos.push({
-      name: name
-    })
+      id: state.todos.length,
+      name: todo.name,
+      createdAt: todo.createdAt,
+    });
+  },
+  deleteTodo(state, todo) {
+    state.todos.splice(state.todos.indexOf(todo), 1);
   }
 };
 

@@ -2,7 +2,7 @@
 <md-card>
   <md-card-header>
     <div class="md-title">{{todo.name}}</div>
-    <div class="md-subhead">{{todo.deadline}}</div>
+    <div class="md-subhead">{{todo.createdAt}}</div>
   </md-card-header>
 </md-card>
 </template>

@@ -3,7 +3,7 @@
   <side-nav></side-nav>
   <div class="main-content">
     <new-todo-form></new-todo-form>
-    <!-- <todo-list></todo-list> -->
+    <todo-list></todo-list>
   </div>
 </div>
 </template>
