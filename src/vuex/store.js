@@ -23,11 +23,10 @@ const actions = {
   addTodo({
     commit,
   }, name) {
-    var todo = {
+    commit('addTodo', {
       name: name,
       createdAt: moment().format('MMMM Do YYYY, h:mm:ss a')
-    }
-    commit('addTodo', todo)
+    })
   },
 
   deleteTodo({
