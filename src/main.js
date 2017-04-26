@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueMaterial from 'vue-material';
+import VueWebsocket from 'vue-websocket';
 import {
   sync,
 } from 'vuex-router-sync';
@@ -17,6 +18,7 @@ import {
 Vue.config.productionTip = false;
 Vue.use(VueMaterial);
 Vue.use(VueRouter);
+Vue.use(VueWebsocket);
 
 const router = new VueRouter({
   routes,
