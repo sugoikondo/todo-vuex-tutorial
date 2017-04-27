@@ -32,7 +32,9 @@ const actions = {
   deleteTodo({
     commit,
   }, todo) {
-    commit('deleteTodo', todo);
+    commit('deleteTodo', {
+      todo: todo
+    });
   },
 };
 
@@ -47,7 +49,7 @@ const mutations = {
     });
   },
   deleteTodo(state, todo) {
-    state.todos.splice(state.todos.indexOf(todo), 1);
+    state.todos.splice(state.todos.indexOf(todo.todo), 1);
   }
 };
 

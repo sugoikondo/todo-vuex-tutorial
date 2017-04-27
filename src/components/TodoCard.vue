@@ -12,7 +12,7 @@
       </md-button>
 
       <md-menu-content>
-        <md-menu-item>
+        <md-menu-item @selected="deleteTodo(todo)">
           <md-icon>close</md-icon>
           <span>削除</span>
         </md-menu-item>
@@ -28,9 +28,19 @@
 </template>
 
 <script>
+import {
+  mapActions,
+}
+from 'vuex';
+
 export default {
   props: {
     todo: Object
+  },
+  methods: {
+    ...mapActions([
+      'deleteTodo'
+    ]),
   }
 }
 </script>
