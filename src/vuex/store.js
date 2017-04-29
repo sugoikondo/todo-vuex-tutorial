@@ -29,7 +29,7 @@ const state = {
       name: '適当なカテゴリ'
     },
   ],
-  currentCategoryId: undefined,
+  currentCategoryId: 1,
 };
 
 const actions = {
@@ -38,6 +38,7 @@ const actions = {
   }, name) {
     commit('addTodo', {
       name: name,
+      categoryId: state.currentCategoryId,
       createdAt: moment().format('MMMM Do YYYY, h:mm:ss a')
     })
   },
@@ -74,6 +75,7 @@ const mutations = {
       id: state.todos.length,
       name: todo.name,
       createdAt: todo.createdAt,
+      categoryId: todo.categoryId,
     });
   },
   deleteTodo(state, todo) {
