@@ -1,6 +1,6 @@
 <template>
 <div>
-  <todo-card v-for="todo in currentCategoryTodos($store.state.currentCategoryId)" :todo="todo" :key="todo.id"></todo-card>
+  <todo-card v-for="todo in currentCategoryTodos($store.state.currentCategory)" :todo="todo" :key="todo.id"></todo-card>
 </div>
 </template>
 <script>

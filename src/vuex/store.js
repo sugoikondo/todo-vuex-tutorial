@@ -4,6 +4,16 @@ import moment from 'moment';
 
 Vue.use(Vuex);
 
+const categories = [{
+    id: 1,
+    name: 'カテゴリその１',
+  },
+  {
+    id: 2,
+    name: '適当なカテゴリ'
+  },
+];
+
 const state = {
   todos: [{
       id: 1,
@@ -20,16 +30,9 @@ const state = {
   ],
   todoName: '',
 
-  categories: [{
-      id: 1,
-      name: 'カテゴリその１',
-    },
-    {
-      id: 2,
-      name: '適当なカテゴリ'
-    },
-  ],
-  currentCategoryId: 1,
+  categories: categories,
+  currentCategory: categories[1],
+
 };
 
 const actions = {
@@ -38,7 +41,7 @@ const actions = {
   }, name) {
     commit('addTodo', {
       name: name,
-      categoryId: state.currentCategoryId,
+      categoryId: state.currentCategory.id,
       createdAt: moment().format('MMMM Do YYYY, h:mm:ss a')
     })
   },
@@ -52,21 +55,19 @@ const actions = {
   },
   changeCurrentCategory({
     commit,
-  }, categoryId) {
-    commit('changeCurrentCategory', {
-      categoryId: categoryId
-    })
+  }, category) {
+    commit('changeCurrentCategory', category)
   }
 };
 
 const getters = {
-  currentCategoryTodos: (state, getters) => (categoryId) => {
-    if (categoryId == undefined) return state.todos;
+  currentCategoryTodos: (state, getters) => (category) => {
+    if (category == undefined) return state.todos;
 
     return state.todos.filter((todo) => {
-      return (todo.categoryId === categoryId);
+      return (todo.categoryId == category.id);
     });
-  }
+  },
 };
 
 const mutations = {
@@ -81,8 +82,8 @@ const mutations = {
   deleteTodo(state, todo) {
     state.todos.splice(state.todos.indexOf(todo.todo), 1);
   },
-  changeCurrentCategory(state, categoryId) {
-    state.currentCategoryId = categoryId.categoryId;
+  changeCurrentCategory(state, category) {
+    state.currentCategory = category;
   }
 };
 
