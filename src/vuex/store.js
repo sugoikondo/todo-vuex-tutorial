@@ -29,6 +29,7 @@ const state = {
       name: '適当なカテゴリ'
     },
   ],
+  currentCategoryId: undefined,
 };
 
 const actions = {
@@ -48,6 +49,13 @@ const actions = {
       todo: todo
     });
   },
+  changeCurrentCategory({
+    commit,
+  }, categoryId) {
+    commit('changeCurrentCategory', {
+      categoryId: categoryId
+    })
+  }
 };
 
 const getters = {
@@ -70,6 +78,9 @@ const mutations = {
   },
   deleteTodo(state, todo) {
     state.todos.splice(state.todos.indexOf(todo.todo), 1);
+  },
+  changeCurrentCategory(state, categoryId) {
+    state.currentCategoryId = categoryId.categoryId;
   }
 };
 
