@@ -1,0 +1,24 @@
+<template>
+<md-table v-once>
+  <md-table-header>
+    <md-table-row>
+      <md-table-head>カテゴリ名</md-table-head>
+    </md-table-row>
+  </md-table-header>
+
+  <md-table-body>
+    <md-table-row v-for="(row, index) in 5" :key="index">
+      <md-table-cell>Dessert Name</md-table-cell>
+    </md-table-row>
+  </md-table-body>
+</md-table>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+</style>

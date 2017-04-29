@@ -6,17 +6,29 @@ Vue.use(Vuex);
 
 const state = {
   todos: [{
-      id: 0,
+      id: 1,
       name: 'テストのTODO',
       createdAt: moment().format('MMMM Do YYYY, h:mm:ss a'),
+      categoryId: 1
     },
     {
-      id: 1,
+      id: 2,
       name: '宿題終わらせないと',
       createdAt: moment().format('MMMM Do YYYY, h:mm:ss a'),
+      categoryId: 2
     }
   ],
   todoName: '',
+
+  categories: [{
+      id: 1,
+      name: 'カテゴリその１',
+    },
+    {
+      id: 2,
+      name: '適当なカテゴリ'
+    },
+  ],
 };
 
 const actions = {
@@ -38,7 +50,15 @@ const actions = {
   },
 };
 
-const getters = {};
+const getters = {
+  currentCategoryTodos: (state, getters) => (categoryId) => {
+    if (categoryId == undefined) return state.todos;
+
+    return state.todos.filter((todo) => {
+      return (todo.categoryId === categoryId);
+    });
+  }
+};
 
 const mutations = {
   addTodo(state, todo) {
