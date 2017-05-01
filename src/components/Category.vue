@@ -9,7 +9,9 @@
     </md-table-header>
     <md-table-body>
       <md-table-row v-for="category in $store.state.categories" :key="category.name">
-        <md-table-cell @click.native="changeCurrentCategory(category)">{{category.name}}</md-table-cell>
+        <router-link to="/categories/todos">
+          <md-table-cell @click.native="changeCurrentCategory(category)">{{category.name}}</md-table-cell>
+        </router-link>
       </md-table-row>
     </md-table-body>
   </md-table>

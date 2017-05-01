@@ -2,16 +2,15 @@
 <div id="app">
   <side-nav></side-nav>
   <div class="main-content">
-    <category></category>
-    <new-todo-form></new-todo-form>
-    <todo-list></todo-list>
+    <!-- <category></category> -->
+    <router-view></router-view>
   </div>
 </div>
 </template>
 
 <script>
-import TodoList from './components/TodoList'
-import NewTodoForm from './components/NewTodoForm'
+import TodoList from './components/Todo/TodoList'
+import NewTodoForm from './components/Todo/NewTodoForm'
 import SideNav from './components/Sidenav'
 import Category from './components/Category'
 

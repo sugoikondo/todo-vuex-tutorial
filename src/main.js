@@ -1,5 +1,3 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueMaterial from 'vue-material';
 // import VueWebsocket from 'vue-websocket';
@@ -8,8 +6,8 @@ import {
 } from 'vuex-router-sync';
 import VueRouter from 'vue-router';
 import App from './App.vue';
-import TodoList from './components/TodoList.vue';
-import NewTodoForm from './components/NewTodoForm.vue';
+import TodoList from './components/Todo/TodoList.vue';
+import NewTodoForm from './components/Todo/NewTodoForm.vue';
 import store from './vuex/store';
 import {
   routes,
@@ -23,6 +21,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes,
   mode: 'history',
+  saveScrollPosition: true,
 });
 
 sync(store, router);
