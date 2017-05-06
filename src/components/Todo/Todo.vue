@@ -2,6 +2,7 @@
 <div>
   <new-todo-form></new-todo-form>
   <todo-list></todo-list>
+  <router-link to="/categories">カテゴリ一一覧に戻る</router-link>
 </div>
 </template>
 
