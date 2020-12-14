@@ -16,7 +16,7 @@
     "vue-router": "^2.4.0",
     "vue-websocket": "^0.2.2",
     "vuex": "^2.3.1",
-    "vuex-router-sync": "^4.1.2",
+    "vuex-router-sync": "^4.3.2",
     "yarn": "^0.23.4"
   },
   "devDependencies": {
