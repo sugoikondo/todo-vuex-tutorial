@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "moment": "^2.18.1",
-    "vue": "^2.2.6",
+    "vue": "^2.6.12",
     "vue-material": "^0.7.1",
     "vue-router": "^2.4.0",
     "vue-websocket": "^0.2.2",
