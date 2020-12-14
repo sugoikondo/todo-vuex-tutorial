@@ -4247,9 +4247,10 @@ vue@^2.1.10, vue@^2.2.6:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.2.tgz#9e52aae3593480be235ff227557837e69f98203a"
 
-vuex-router-sync@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/vuex-router-sync/-/vuex-router-sync-4.1.2.tgz#584d6315909257adec2914a63d54b428c016b8ec"
+vuex-router-sync@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/vuex-router-sync/-/vuex-router-sync-4.3.2.tgz#604b61a377daaa68b2ef6e8e0326b2cad26f359e"
+  integrity sha512-Uwi1aPM1U9IOzEqJl8r3aCQm8l2H+IMm0lMQtznY7ENv8XK0w+6e+le6r06k0W9ud7qBJ4fDjbCcNpXBdnO3Xg==
 
 vuex@^2.3.1:
   version "2.3.1"
