@@ -4209,11 +4209,10 @@ vue-loader@^11.3.4:
     vue-style-loader "^2.0.0"
     vue-template-es2015-compiler "^1.2.2"
 
-vue-material@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/vue-material/-/vue-material-0.7.1.tgz#2ed25eb1e2054c21fe323361604c92f40ef5ada1"
-  dependencies:
-    vue "^2.1.10"
+vue-material@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/vue-material/-/vue-material-0.7.5.tgz#045517403c1338aceabd73030f3dd6b5c744fe55"
+  integrity sha512-MRtEeeOnMBVxaVoGoXcwupgdxqa3DyGDGXAA/7wzMRgQ4dWFNTlaS+p5434068dBJT7EofZe5La/ONKYivL2XQ==
 
 vue-router@^2.4.0:
   version "2.5.3"
@@ -4243,7 +4242,7 @@ vue-websocket@^0.2.2:
   dependencies:
     socket.io-client "1.5.1"
 
-vue@^2.1.10, vue@^2.2.6:
+vue@^2.2.6:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.2.tgz#9e52aae3593480be235ff227557837e69f98203a"
 
